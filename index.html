@@ -22,18 +22,20 @@
             background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
         }
 
-        /* Additional CSS for mobile menu animation */
+        /* Essential CSS for mobile menu animation and hidden state */
         .mobile-menu {
             transition: max-height 0.3s ease-out;
-            overflow: hidden;
-            max-height: 0; /* Hidden by default */
+            overflow: hidden; /* Crucial to hide content and prevent blank space */
+            max-height: 0;   /* Crucial: Hidden by default */
             background-color: #1a202c; /* bg-gray-900 from header */
-            padding-top: 1rem; /* pt-4 equivalent */
-            padding-bottom: 1rem; /* pb-4 equivalent */
+            padding-top: 0; /* No top padding when closed */
+            padding-bottom: 0; /* No bottom padding when closed */
         }
         .mobile-menu.open {
             max-height: 500px; /* Adjust based on content */
             transition: max-height 0.5s ease-in;
+            padding-top: 1rem; /* pt-4 equivalent when open */
+            padding-bottom: 1rem; /* pb-4 equivalent when open */
         }
         .mobile-menu a {
             color: white; /* Ensure text is white in mobile menu */
@@ -79,7 +81,7 @@
         </div>
 
         <div id="mobile-menu" class="mobile-menu md:hidden w-full">
-            <ul class="flex flex-col space-y-4 text-xl items-center pb-4">
+            <ul class="flex flex-col space-y-4 text-xl items-center pt-4 pb-4">
                 <li><a href="#services" class="block hover:text-amber-400 transition duration-300 rounded-md p-2">Services</a></li>
                 <li><a href="#about" class="block hover:text-amber-400 transition duration-300 rounded-md p-2">About Us</a></li>
                 <li><a href="#testimonials" class="block hover:text-amber-400 transition duration-300 rounded-md p-2">Testimonials</a></li>
@@ -278,7 +280,7 @@
 
                 // Close mobile menu if open after clicking a link
                 const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenu.classList.contains('open')) {
+                if (mobileMenu && mobileMenu.classList.contains('open')) { // Added mobileMenu check
                     mobileMenu.classList.remove('open');
                 }
             });
@@ -289,7 +291,7 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         // Added a check to ensure elements exist before adding event listener
-        if (mobileMenuButton && mobileMenu) { 
+        if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('open');
             });
