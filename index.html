@@ -6,39 +6,31 @@
   <title>JC&D Chimney Service + - Chimney Cleaning, Fencing, Decks & Door Installation</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
+    body { font-family: 'Inter', sans-serif; }
     .hero-section {
       background-image: url('https://images.unsplash.com/photo-1544976722-e421e4fcb2b8?q=80&w=2942&auto=format&fit=crop');
       background-size: cover;
       background-position: center;
     }
-
     .hero-overlay {
       background-color: rgba(0, 0, 0, 0.5);
     }
-
     .mobile-menu {
       transition: max-height 0.4s ease-in-out;
       overflow: hidden;
       max-height: 0;
       background-color: #1a202c;
     }
-
     .mobile-menu.open {
       max-height: 500px;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-
     .mobile-menu a {
       color: white;
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
+      padding: 0.75rem;
       display: block;
       width: 100%;
       text-align: center;
@@ -49,59 +41,29 @@
 
   <!-- Header -->
   <header class="bg-gray-900 text-white shadow-lg py-4 sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold tracking-wider rounded-md p-2 flex-shrink-0">
-        JC&D Chimney Service <span class="text-amber-400">+</span>
-      </a>
-
-      <div class="flex items-center space-x-4 md:hidden">
-        <a href="tel:+15132268197" class="text-lg font-semibold hover:text-amber-400 transition duration-300 rounded-md p-2">
-          <i class="fas fa-phone-alt"></i>
-        </a>
-        <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
-          <i class="fas fa-bars"></i>
-        </button>
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-wider">JC&D Chimney Service <span class="text-amber-400">+</span></a>
+      <div class="md:hidden flex items-center gap-4">
+        <a href="tel:+15132268197"><i class="fas fa-phone-alt text-lg"></i></a>
+        <button id="mobile-menu-button" class="text-2xl"><i class="fas fa-bars"></i></button>
       </div>
-
-      <div class="hidden md:flex items-center md:space-x-8 lg:space-x-12">
-        <nav>
-          <ul class="flex space-x-4 lg:space-x-6 text-lg">
-            <li><a href="#services" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Services</a></li>
-            <li><a href="#about" class="hover:text-amber-400 transition duration-300 rounded-md p-2">About Us</a></li>
-            <li><a href="#testimonials" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Testimonials</a></li>
-            <li><a href="#contact" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="flex items-center space-x-4">
-          <a href="tel:+15132268197" class="text-lg font-semibold hover:text-amber-400 transition duration-300 rounded-md p-2">
-            <i class="fas fa-phone-alt mr-2"></i>(513) 226-8197
-          </a>
-          <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-            Get a Free Quote
-          </a>
-        </div>
-      </div>
+      <nav class="hidden md:flex gap-6 text-lg">
+        <a href="#services" class="hover:text-amber-400">Services</a>
+        <a href="#about" class="hover:text-amber-400">About Us</a>
+        <a href="#testimonials" class="hover:text-amber-400">Testimonials</a>
+        <a href="#contact" class="hover:text-amber-400">Contact</a>
+      </nav>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden w-full">
-      <ul class="flex flex-col text-xl">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 mt-4 text-base">
-            Get a Free Quote
-          </a>
-        </li>
-      </ul>
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section h-[60vh] md:h-[75vh] flex items-center justify-center text-white text-center relative">
+  <!-- Hero -->
+  <section class="hero-section h-[60vh] md:h-[75vh] flex items-center justify-center relative text-white text-center">
     <div class="hero-overlay absolute inset-0 z-0"></div>
     <div class="relative z-10 px-6">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Chimney & Deck Services</h1>
@@ -109,37 +71,91 @@
     </div>
   </section>
 
+  <!-- Services -->
+  <section id="services" class="py-16 bg-white px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Chimney Cleaning</h3>
+          <p>Keep your chimney clean and safe with our professional services.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Fence Installation</h3>
+          <p>Privacy and protection with high-quality fencing customized to your needs.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Deck Building</h3>
+          <p>Beautiful and sturdy decks to enjoy your outdoor space.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Door Replacement</h3>
+          <p>Upgrade your home’s entrance with expert door installation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-16 bg-gray-50 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-lg">JC&D Chimney Service + is a locally owned business providing top-quality chimney, fencing, and deck services. Our team is committed to craftsmanship, safety, and customer satisfaction.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 bg-white px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">What Our Customers Say</h2>
+      <div class="space-y-8">
+        <blockquote class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <p>“Fast and reliable service. The chimney has never looked better!”</p>
+          <footer class="mt-4 text-sm text-gray-600">— Sarah L.</footer>
+        </blockquote>
+        <blockquote class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <p>“They built a custom deck in just three days. Highly recommended.”</p>
+          <footer class="mt-4 text-sm text-gray-600">— Tom W.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-50 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+      <p class="mb-6">Ready to book? Call us at <a href="tel:+15132268197" class="text-amber-500 font-semibold">(513) 226-8197</a> or use the form below.</p>
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Your Name" class="w-full border p-3 rounded" />
+        <input type="email" placeholder="Your Email" class="w-full border p-3 rounded" />
+        <textarea rows="4" placeholder="Your Message" class="w-full border p-3 rounded"></textarea>
+        <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white py-2 px-6 rounded shadow">Send Message</button>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center mt-10">
+  <footer class="bg-gray-900 text-white py-6 text-center">
     &copy; <span id="current-year"></span> JC&D Chimney Service. All rights reserved.
   </footer>
 
-  <!-- JavaScript -->
   <script>
-    // Set current year
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const menuBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-      });
-    }
-
-    // Smooth scrolling and auto-close
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
         mobileMenu.classList.remove('open');
       });
     });
   </script>
+
 </body>
 </html>
