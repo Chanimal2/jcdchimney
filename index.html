@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JC&D Chimney Service + - Chimney Cleaning, Fencing, Decks & Door Installation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -25,19 +27,23 @@
         /* Essential CSS for mobile menu animation and hidden state */
         .mobile-menu {
             transition: max-height 0.3s ease-out;
-            overflow: hidden; /* Crucial to hide content and prevent blank space */
-            max-height: 0;   /* Crucial: Hidden by default */
+            overflow: hidden !important; /* Crucial: Explicitly hide overflow */
+            max-height: 0 !important;   /* Crucial: Explicitly hidden by default */
             background-color: #1a202c; /* bg-gray-900 from header */
-            padding-top: 0; /* No top padding when closed */
-            padding-bottom: 0; /* No bottom padding when closed */
-            /* TEMP DEBUGGING BORDER: Uncomment the line below to see if the mobile menu div is visible */
-            /* border: 2px solid red; */
+            padding-top: 0 !important; /* No top padding when closed */
+            padding-bottom: 0 !important; /* No bottom padding when closed */
+            /* TEMP DEBUGGING BORDER: Uncomment the line below to see if the mobile menu div is visible when it shouldn't be */
+            /* border: 2px solid red !important; */
         }
         .mobile-menu.open {
-            max-height: 500px; /* Adjust based on content */
+            max-height: 500px !important; /* Adjust based on content */
             transition: max-height 0.5s ease-in;
-            padding-top: 1rem; /* pt-4 equivalent when open */
-            padding-bottom: 1rem; /* pb-4 equivalent when open */
+            padding-top: 1rem !important; /* pt-4 equivalent when open */
+            padding-bottom: 1rem !important; /* pb-4 equivalent when open */
+        }
+        .mobile-menu ul { /* Ensure the list inside is displayed properly */
+            display: flex; /* Or block, depending on desired layout of list items */
+            flex-direction: column;
         }
         .mobile-menu a {
             color: white; /* Ensure text is white in mobile menu */
