@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC&D Chimney Service + - Chimney Cleaning, Fencing, Decks & Door Installation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0xaijjfFMhQp99m3bL/9zC07s+e+zL5b4eB1C5z/x7tD9lP6z0vF0y0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for hero image overlay */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white shadow-lg py-4 px-6 md:px-10 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo / Business Name -->
+            <a href="#" class="text-2xl font-bold tracking-wider rounded-md p-2">
+                JC&D Chimney Service <span class="text-amber-400">+</span>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg">
+                    <li><a href="#services" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Services</a></li>
+                    <li><a href="#about" class="hover:text-amber-400 transition duration-300 rounded-md p-2">About Us</a></li>
+                    <li><a href="#testimonials" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-amber-400 transition duration-300 rounded-md p-2">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Phone Number & CTA -->
+            <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                <a href="tel:5132268197" class="text-lg font-semibold hover:text-amber-400 transition duration-300 rounded-md p-2">
+                    <i class="fas fa-phone-alt mr-2"></i>(513) 226-8197
+                </a>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-white text-center bg-cover bg-center"
+        style="background-image: url('https://placehold.co/1920x1080/4A4A4A/FFFFFF?text=Quality+Service+for+Your+Home');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 p-6 md:p-10 max-w-4xl rounded-xl shadow-2xl bg-black bg-opacity-40">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                Expert Chimney Sweeping, Fencing, Deck Building & Door Installation
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Protecting Your Home & Enhancing Your Property in Cincinnati, OH
+            </p>
+            <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xl">
+                Explore Our Services
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-6 md:px-10 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-gray-900">Our Professional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Service Card: Chimney Cleaning -->
+                <div class="bg-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-blue-200">
+                    <div class="text-5xl text-blue-600 mb-6"><i class="fas fa-fire"></i></div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Chimney Cleaning</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Ensure the safety and efficiency of your fireplace with our thorough chimney sweeping and inspection services.
+                    </p>
+                    <a href="#contact" class="mt-6 inline-block text-blue-600 hover:text-blue-800 font-semibold transition duration-300">Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                </div>
+
+                <!-- Service Card: Fencing -->
+                <div class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-green-200">
+                    <div class="text-5xl text-green-600 mb-6"><i class="fas fa-fence"></i></div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Fencing</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Enhance your property's privacy, security, and curb appeal with our expert fence installation.
+                    </p>
+                    <a href="#contact" class="mt-6 inline-block text-green-600 hover:text-green-800 font-semibold transition duration-300">Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                </div>
+
+                <!-- Service Card: Deck Building -->
+                <div class="bg-red-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-red-200">
+                    <div class="text-5xl text-red-600 mb-6"><i class="fas fa-deck"></i></div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Deck Building</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Create your ideal outdoor living space with custom-designed and expertly built decks.
+                    </p>
+                    <a href="#contact" class="mt-6 inline-block text-red-600 hover:text-red-800 font-semibold transition duration-300">Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                </div>
+
+                <!-- Service Card: Door Installation -->
+                <div class="bg-purple-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-purple-200">
+                    <div class="text-5xl text-purple-600 mb-6"><i class="fas fa-door-open"></i></div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Door Installation</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Upgrade your home's appearance and energy efficiency with professional door installation.
+                    </p>
+                    <a href="#contact" class="mt-6 inline-block text-purple-600 hover:text-purple-800 font-semibold transition duration-300">Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-16 px-6 md:px-10 bg-gray-100">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Trusted+Professionals" alt="Trusted Professionals" class="rounded-xl shadow-xl w-full h-auto object-cover border-4 border-amber-500">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Why Choose JC&D Chimney Service +?</h2>
+                <ul class="text-lg text-gray-700 space-y-4">
+                    <li class="flex items-start lg:items-center">
+                        <i class="fas fa-check-circle text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
+                        <p><strong class="text-gray-900">BBB Accredited with A+ Rating:</strong> Committed to upholding the highest standards of trust and service.</p>
+                    </li>
+                    <li class="flex items-start lg:items-center">
+                        <i class="fas fa-medal text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
+                        <p><strong class="text-gray-900">Experienced & Reliable:</strong> Two years in business, delivering quality craftsmanship and dependable service.</p>
+                    </li>
+                    <li class="flex items-start lg:items-center">
+                        <i class="fas fa-hands-helping text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
+                        <p><strong class="text-gray-900">Customer Satisfaction Guaranteed:</strong> Your happiness is our priority, from start to finish.</p>
+                    </li>
+                    <li class="flex items-start lg:items-center">
+                        <i class="fas fa-heart text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
+                        <p><strong class="text-gray-900">Family-Owned & Operated:</strong> Jack's daughter is his inspiration, ensuring every job is done with care, integrity, and a personal touch.</p>
+                    </li>
+                </ul>
+                <a href="#contact" class="mt-10 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
+                    Get Your Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-6 md:px-10 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-gray-900">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">
+                        "Jack did an amazing job cleaning our chimney. Professional, courteous, and very thorough. Highly recommend JC&D Chimney Service +!"
+                    </p>
+                    <p class="font-semibold text-gray-900">- Sarah P., Cincinnati</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">
+                        "Our new fence looks fantastic! The team was efficient and the quality of work is outstanding. Couldn't be happier with the result."
+                    </p>
+                    <p class="font-semibold text-gray-900">- Mark T., OH</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">
+                        "From design to completion, our new deck is perfect. Jack truly cares about his clients and delivers excellent work. A+"
+                    </p>
+                    <p class="font-semibold text-gray-900">- Jessica L., Cincinnati</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 md:px-10 bg-gray-900 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-white">Contact Us & Book a Service!</h2>
+            <div class="flex flex-col lg:flex-row gap-12 items-center justify-center">
+
+                <!-- Contact Information -->
+                <div class="lg:w-1/2 text-left bg-gray-800 p-8 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-amber-400">Reach Out Directly</h3>
+                    <p class="text-lg mb-4 flex items-center"><i class="fas fa-phone-alt text-amber-500 mr-3"></i> <a href="tel:5132268197" class="hover:underline">(513) 226-8197</a></p>
+                    <p class="text-lg mb-6 flex items-center"><i class="fas fa-envelope text-amber-500 mr-3"></i> <a href="mailto:Jack@jcdchimney.com" class="hover:underline">Jack@jcdchimney.com</a></p>
+
+                    <h3 class="text-2xl font-semibold mb-6 text-amber-400">Ready to Book?</h3>
+                    <p class="text-lg mb-6 text-gray-300">Use our convenient online scheduler to find a time that works for you.</p>
+                    <a href="YOUR_CALENDLY_LINK_HERE" target="_blank" class="w-full inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg text-center">
+                        <i class="fas fa-calendar-alt mr-3"></i>Book an Appointment
+                    </a>
+
+                    <p class="text-lg mt-8 mb-4 flex items-center"><i class="fas fa-map-marker-alt text-amber-500 mr-3"></i> Cincinnati, OH 45227-3007</p>
+                    <p class="text-lg mb-6 flex items-center"><i class="fas fa-clock text-amber-500 mr-3"></i> Mon-Fri: 8 AM - 5 PM</p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/JC&DChimneyService" target="_blank" class="text-amber-500 hover:text-amber-600 transition duration-300 text-3xl">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <!-- Add other social media links if available -->
+                    </div>
+                </div>
+
+                <!-- Placeholder for map or image -->
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/600x400/374151/D1D5DB?text=Location+Map+or+Image" alt="Location Map or Business Image" class="rounded-xl shadow-xl w-full h-auto object-cover border-4 border-amber-500">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-950 text-gray-400 py-8 px-6 md:px-10 text-center">
+        <div class="container mx-auto">
+            <p class="mb-4 text-lg">&copy; <span id="current-year"></span> JC&D Chimney Service <span class="text-amber-400">+</span>. All rights reserved.</p>
+            <nav class="flex justify-center space-x-6 text-sm">
+                <a href="#services" class="hover:text-amber-400 transition duration-300">Services</a>
+                <a href="#about" class="hover:text-amber-400 transition duration-300">About Us</a>
+                <a href="#testimonials" class="hover:text-amber-400 transition duration-300">Testimonials</a>
+                <a href="#contact" class="hover:text-amber-400 transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
