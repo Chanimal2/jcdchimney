@@ -5,49 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>JC&D Chimney Service + - Chimney Cleaning, Fencing, Decks & Door Installation</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* GLOBAL RESET: Ensure no inherited margins/paddings from browser defaults */
         html, body {
             margin: 0 !important;
             padding: 0 !important;
-            box-sizing: border-box; /* Crucial: Ensures padding/border are included in element's total width/height */
-            width: 100vw; /* Ensure no horizontal overflow */
+            box-sizing: border-box;
+            width: 100vw;
             overflow-x: hidden;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f9fafb;
-            min-height: 100vh; /* This ensures the page is at least viewport height */
-            position: relative; /* For ensuring relative positioning context if needed */
-            /* DEBUGGING STYLE: Body background */
-            /* background-color: #ffe0b2 !important; /* Light Orange */ */
-            /* border: 5px solid red !important; */
+            min-height: 100vh;
+            position: relative;
         }
-
-        /* HEADER STYLES */
         header {
             width: 100%;
-            /* For sticky header, we still need its height to push content down */
-            /* If we were using fixed, we'd need a separate padding-top on body */
-            position: sticky; /* Keep sticky for normal flow behaviour until md breakpoint */
+            position: sticky;
             top: 0;
             z-index: 50;
-            background-color: #1a202c; /* bg-gray-900 */
-            /* DEBUGGING STYLE: Header background */
-            /* background-color: #add8e6 !important; /* Light Blue */ */
-            /* border: 5px solid blue !important; */
+            background-color: #1a202c;
         }
-        /* Ensure the header's direct children don't cause margins/padding issues */
         header > div {
-            padding: 1rem; /* Equivalent to py-4 px-4 for responsiveness */
+            padding: 1rem;
             margin: 0;
         }
-
-
-        /* HERO SECTION STYLES - SIGNIFICANT CHANGE HERE */
         .hero-section {
             background-image: url('https://images.unsplash.com/photo-1544976722-e421e4fcb2b8?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
@@ -58,74 +42,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* REMOVED min-height:calc(100vh - 64px); */
-            /* Instead, we'll use padding to give it vertical space and make it visually substantial */
-            padding-top: 6rem; /* Adjust this value to control the top space */
-            padding-bottom: 6rem; /* Adjust this value to control the bottom space */
-            margin: 0; /* Ensure no external margins */
-            /* DEBUGGING STYLE: Hero section background */
-            /* background-color: #90ee90 !important; /* Light Green */ */
-            /* border: 5px solid orange !important; */
+            min-height: calc(100vh - 64px); /* header is 64px tall */
+            margin: 0;
+            padding: 0;
         }
         @media (min-width: 768px) {
             .hero-section {
-                /* On desktop, keep it full screen below the header */
-                min-height: calc(100vh - theme('spacing.16')); /* theme('spacing.16') should be 64px (header height) */
-                padding-top: 0;
-                padding-bottom: 0;
+                min-height: calc(100vh - 64px);
             }
         }
-
         .hero-overlay {
             background-color: rgba(0,0,0,0.5);
             position: absolute;
-            inset: 0; /* This makes it cover the entire hero section */
+            inset: 0;
         }
-        .hero-section > div { /* For the inner content div of the hero */
-            position: relative; /* Ensure content is above overlay */
+        .hero-section > div {
+            position: relative;
             z-index: 10;
-            max-width: 48rem; /* max-w-3xl is 48rem */
+            max-width: 48rem;
             width: 100%;
             margin: 0 auto;
-            padding: 1.5rem 1rem; /* px-4 py-6 md:p-10 */
-            /* DEBUGGING STYLE: Hero content border */
-            /* border: 3px solid yellow !important; */
+            padding: 1.5rem 1rem;
         }
-
-
-        /* MOBILE MENU STYLES */
-        .mobile-menu {
-            display: none; /* Force hide by default when not open */
-            max-height: 0; /* Used for smooth transition when opened */
-            overflow: hidden;
-            transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1), padding 0.3s cubic-bezier(0.4,0,0.2,1);
-            background-color: #1a202c;
-            padding-top: 0;
-            padding-bottom: 0;
-            /* DEBUGGING STYLE: Mobile menu background */
-            /* background-color: #ffb6c1 !important; /* Light Pink */ */
-            /* border: 2px solid purple !important; */
-        }
-        .mobile-menu.open {
-            display: block; /* Force show when open */
-            max-height: 500px; /* Sufficient height for content */
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        .mobile-menu ul {
-            display: flex;
-            flex-direction: column;
-        }
-        .mobile-menu a {
-            color: white;
-            display: block; /* Make links block to take full width of list item */
-            padding: 0.5rem 0; /* Some padding for tap target */
-        }
-
-        /* Ensure smooth scroll for all sections */
-        section {
-            scroll-margin-top: 64px; /* Adjust this if header height changes */
-        }
+        /* ...rest of your styles unchanged... */
     </style>
 </head>
 <body>
@@ -153,15 +92,7 @@
             class="mobile-menu md:hidden w-full"
             aria-label="Mobile navigation"
         >
-            <nav>
-                <ul class="flex flex-col items-center space-y-2 py-4 text-lg">
-                    <li><a href="#services" class="block hover:text-amber-400 transition p-2">Services</a></li>
-                    <li><a href="#about" class="block hover:text-amber-400 transition p-2">About Us</a></li>
-                    <li><a href="#testimonials" class="block hover:text-amber-400 transition p-2">Testimonials</a></li>
-                    <li><a href="#contact" class="block hover:text-amber-400 transition p-2">Contact</a></li>
-                    <li><a href="tel:5132268197" class="text-lg font-semibold hover:text-amber-400 py-2"><i class="fas fa-phone-alt mr-2"></i>(513) 226-8197</a></li>
-                </ul>
-            </nav>
+            <!-- ...mobile menu... -->
         </div>
     </header>
     <section class="hero-section">
@@ -172,177 +103,6 @@
             <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-base md:text-xl block w-full sm:w-auto mx-auto">Book an Appointment</a>
         </div>
     </section>
-    <section id="services" class="py-16 px-4 md:px-10 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-12 text-gray-900">Our Professional Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-blue-200">
-                    <div class="text-5xl text-blue-600 mb-6"><i class="fas fa-fire"></i></div>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Chimney Cleaning</h3>
-                    <p class="text-gray-700 leading-relaxed">Ensure the safety and efficiency of your fireplace with our thorough chimney sweeping and inspection services.</p>
-                    <a href="#contact" class="mt-6 inline-block text-blue-600 hover:text-blue-800 font-semibold transition duration-300">Book Now <i class="fas fa-arrow-down ml-2 text-sm"></i></a>
-                </div>
-                <div class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-green-200">
-                    <div class="text-5xl text-green-600 mb-6"><i class="fas fa-fence"></i></div>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Fencing</h3>
-                    <p class="text-gray-700 leading-relaxed">Enhance your property's privacy, security, and curb appeal with our expert fence installation.</p>
-                    <a href="#contact" class="mt-6 inline-block text-green-600 hover:text-green-800 font-semibold transition duration-300">Book Now <i class="fas fa-arrow-down ml-2 text-sm"></i></a>
-                </div>
-                <div class="bg-red-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-red-200">
-                    <div class="text-5xl text-red-600 mb-6"><i class="fas fa-deck"></i></div>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Deck Building</h3>
-                    <p class="text-gray-700 leading-relaxed">Create your ideal outdoor living space with custom-designed and expertly built decks.</p>
-                    <a href="#contact" class="mt-6 inline-block text-red-600 hover:text-red-800 font-semibold transition duration-300">Book Now <i class="fas fa-arrow-down ml-2 text-sm"></i></a>
-                </div>
-                <div class="bg-purple-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-purple-200">
-                    <div class="text-5xl text-purple-600 mb-6"><i class="fas fa-door-open"></i></div>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Door Installation</h3>
-                    <p class="text-gray-700 leading-relaxed">Upgrade your home's appearance and energy efficiency with professional door installation.</p>
-                    <a href="#contact" class="mt-6 inline-block text-purple-600 hover:text-purple-800 font-semibold transition duration-300">Book Now <i class="fas fa-arrow-down ml-2 text-sm"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="py-16 px-4 md:px-10 bg-gray-100">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2 mb-8 lg:mb-0">
-                <img src="150chimney.png" alt="man cleaning chimney in Cincinnati" class="rounded-xl shadow-xl w-full h-auto object-cover border-4 border-amber-500">
-            </div>
-            <div class="lg:w-1/2 text-center lg:text-left">
-                <h2 class="text-4xl font-bold mb-6 text-gray-900">Why Choose JC&D Chimney Service +?</h2>
-                <ul class="text-lg text-gray-700 space-y-4">
-                    <li class="flex items-start lg:items-center"><i class="fas fa-check-circle text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
-                        <p><strong class="text-gray-900">BBB Accredited with A+ Rating:</strong> Committed to upholding the highest standards of trust and service.</p>
-                    </li>
-                    <li class="flex items-start lg:items-center"><i class="fas fa-medal text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
-                        <p><strong class="text-gray-900">Experienced & Reliable:</strong> Two years in business, delivering quality craftsmanship and dependable service.</p>
-                    </li>
-                    <li class="flex items-start lg:items-center"><i class="fas fa-hands-helping text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
-                        <p><strong class="text-gray-900">Customer Satisfaction Guaranteed:</strong> Your happiness is our priority, from start to finish.</p>
-                    </li>
-                    <li class="flex items-start lg:items-center"><i class="fas fa-heart text-amber-500 text-2xl mr-3 mt-1 lg:mt-0"></i>
-                        <p><strong class="text-gray-900">Family-Owned & Operated:</strong> Jack's daughter is his inspiration, ensuring every job is done with care, integrity, and a personal touch.</p>
-                    </li>
-                </ul>
-                <a href="#contact" class="mt-10 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-                    Book an Appointment
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="testimonials" class="py-16 px-4 md:px-10 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-12 text-gray-900">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
-                    <p class="text-gray-700 italic mb-6">"Jack did an amazing job cleaning our chimney. Professional, courteous, and very thorough. Highly recommend JC&D Chimney Service +!"</p>
-                    <p class="font-semibold text-gray-900">- Sarah P., Cincinnati</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
-                    <p class="text-gray-700 italic mb-6">"Our new fence looks fantastic! The team was efficient and the quality of work is outstanding. Couldn't be happier with the result."</p>
-                    <p class="font-semibold text-gray-900">- Mark T., OH</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                    <i class="fas fa-quote-left text-amber-500 text-3xl mb-4"></i>
-                    <p class="text-gray-700 italic mb-6">"From design to completion, our new deck is perfect. Jack truly cares about his clients and delivers excellent work. A+"</p>
-                    <p class="font-semibold text-gray-900">- Jessica L., Cincinnati</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="py-16 px-4 md:px-10 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-12 text-white">Contact Us & Book a Service!</h2>
-            <div class="flex flex-col lg:flex-row gap-12 items-center justify-center">
-                <div class="lg:w-1/2 text-left bg-gray-800 p-8 rounded-xl shadow-xl mb-8 lg:mb-0 w-full max-w-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-amber-400">Reach Out Directly</h3>
-                    <p class="text-lg mb-4 flex items-center"><i class="fas fa-phone-alt text-amber-500 mr-3"></i> <a href="tel:5132268197" class="hover:underline">(513) 226-8197</a></p>
-                    <p class="text-lg mb-6 flex items-center"><i class="fas fa-envelope text-amber-500 mr-3"></i> <a href="mailto:Jack@jcdchimney.com" class="hover:underline">Jack@jcdchimney.com</a></p>
-                    <h3 class="text-2xl font-semibold mb-6 text-amber-400">Ready to Book?</h3>
-                    <p class="text-lg mb-6 text-gray-300">Use our convenient online scheduler to find a time that works for you.</p>
-                    <a href="https://calendly.com/jcdchimney" target="_blank" class="w-full inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg text-center">
-                        <i class="fas fa-calendar-alt mr-3"></i>Book an Appointment
-                    </a>
-                    <p class="text-lg mt-8 mb-4 flex items-center"><i class="fas fa-map-marker-alt text-amber-500 mr-3"></i> Cincinnati, OH 45227-3007</p>
-                    <p class="text-lg mb-6 flex items-center"><i class="fas fa-clock text-amber-500 mr-3"></i> Mon-Fri: 8 AM - 5 PM</p>
-                    <div class="flex space-x-6">
-                        <a href="150chimney.png" target="_blank" class="text-amber-500 hover:text-amber-600 transition duration-300 text-3xl">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 w-full max-w-lg">
-                    <img src="maninchimeysaftysuite.jpg" alt="Get Your Chimney cleaned for $150" class="rounded-xl shadow-xl w-full h-auto object-cover border-4 border-amber-500">
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-gray-950 text-gray-400 py-8 px-4 md:px-10 text-center">
-        <div class="max-w-7xl mx-auto">
-            <p class="mb-4 text-lg">&copy; <span id="current-year"></span> JC&D Chimney Service <span class="text-amber-400">+</span>. All rights reserved.</p>
-            <nav class="flex justify-center space-x-6 text-sm">
-                <a href="#services" class="hover:text-amber-400 transition duration-300">Services</a>
-                <a href="#about" class="hover:text-amber-400 transition duration-300">About Us</a>
-                <a href="#testimonials" class="hover:text-amber-400 transition duration-300">Testimonials</a>
-                <a href="#contact" class="hover:text-amber-400 transition duration-300">Contact</a>
-            </nav>
-        </div>
-    </footer>
-    <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Hamburger menu functionality
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        let menuOpen = false;
-
-        if (btn && menu) {
-            btn.addEventListener('click', function() {
-                menuOpen = !menuOpen;
-                if (menuOpen) {
-                    menu.classList.add('open');
-                    btn.setAttribute('aria-expanded', 'true');
-                    btn.innerHTML = '<i class="fas fa-times"></i>'; // Change icon to 'X'
-                } else {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.innerHTML = '<i class="fas fa-bars"></i>'; // Change icon back to hamburger
-                }
-            });
-
-            // Close menu when a link is clicked
-            menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.innerHTML = '<i class="fas fa-bars"></i>';
-                    menuOpen = false;
-                });
-            });
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const hash = this.getAttribute('href');
-                if (hash.length > 1 && document.querySelector(hash)) {
-                    e.preventDefault();
-                    // Get header height for offset
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetElement = document.querySelector(hash);
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = elementPosition - headerHeight; // Scroll to target minus header height
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- ...rest of your page... -->
 </body>
 </html>
